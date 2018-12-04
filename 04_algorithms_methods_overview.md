@@ -34,4 +34,4 @@ Policy extraction is a method for determining the policy implied by a set of opt
 * On-Policy - Learns by following policy and observing results.
 * Off-Policy - Converges on optimal policy despite acting suboptimally.
 ### Q-Learning
-* Q-Learning iteratively computes Q-values, which are the values for actions from a particular state. In Q-learning, we take an action from a state, resulting in a sample outcome. We then use the sample to update our estimate of the Q-value for that action and state. Q-learning will converge on an optimal policy, even if suboptimal actions are being taken.
+Q-Learning iteratively computes Q-values, which are the values for actions from a particular state. In Q-learning, we take an action from a state, resulting in a sample outcome. We then use the sample to update our estimate of the Q-value for that action and state. Q-learning will converge on an optimal policy, even if suboptimal actions are being taken.
