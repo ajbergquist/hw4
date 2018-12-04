@@ -19,20 +19,19 @@ Minimax is an adversarial search algorithm in which players alternate turns, wit
 ### Minimax Search w/ Alpha-Beta Pruning
 This is a version of minimax search which takes advantage of the fact that some portions of the game tree can be ignored, or pruned, based on previously discovered minimum or maximum scores. Pruning is achieved by keeping track of alpha, the max player's best option on the path to the root of the search tree, and beta, the min player's best option on the path to the root.
 ### Expectimax Search
-
-
+Expectimax search is a version of minimax search in which the opponent is not assumed to act optimally. The max nodes are calculated as before, but min nodes are calculated as an expected utility, i.e. a weighted average of the child nodes.
 ### Value Iteration
-
+Value iteration is a method of determining the values for states of a system with an unknown underlying Markov Decision Process. Values are computed by performing repeated iterations of expectimax until the values converge.
 ### Policy Evaluation
-
+Policy evaluation finds the values of a system using a fixed policy. Like value iteration, policy evaluation updates values by iterating using the Bellman equations.
 ### Policy Extraction
-
+Policy extraction is a method for determining the policy implied by a set of optimal values. The policy is found by performing a one-step expectimax using the known values.
 ### Reinforcement Learning
-* model-based vs. model-free
-* policy-based vs. value-based
-* on-policy vs. off-policy
-
+* Model-Based Learning - Learns an approximate model based on experiences, then solves for values as if the learned model were correct.
+* Model-Free - Doesn't estimate an approximate model, but executes an existing policy and learns from the results.
+* Policy-based - Learns values by using an explicit policy.
+* Value-based - Learns values without knowing policy.
+* On-Policy - Learns by following policy and observing results.
+* Off-Policy - Converges on optimal policy despite acting suboptimally.
 ### Q-Learning
-
-### Cross-entropy Method
-
+* Q-Learning iteratively computes Q-values, which are the values for actions from a particular state. In Q-learning, we take an action from a state, resulting in a sample outcome. We then use the sample to update our estimate of the Q-value for that action and state. Q-learning will converge on an optimal policy, even if suboptimal actions are being taken.
